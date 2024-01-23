@@ -2,6 +2,9 @@
 
 # Build envoy-gloo-ee and copy it into nighthawk_binaries/
 
+# WARNING these build commands only work on my (ashish's) machine (TODO fix
+# this?)
+
 DOCKER_BUILD_DIR=/build/envoy-gloo-ee
 
 cd "$(readlink -f $(dirname $0))"

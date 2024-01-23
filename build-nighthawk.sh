@@ -3,6 +3,9 @@
 # Build the nighthawk client and server executables and copy them into
 # nighthawk_binaries/
 
+# WARNING these build commands only work on my (ashish's) machine (TODO fix
+# this?)
+
 DOCKER_BUILD_DIR=/build/nighthawk/
 
 cd "$(readlink -f $(dirname $0))"
