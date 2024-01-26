@@ -4,8 +4,9 @@ Running nighthawk:
     * envoy-gloo-ee: `run-envoy-gloo-ee.sh`
     * tap server: `run-tap-server.sh`
     * nighthawk server (upstream): `run-nighthawk-server.sh`
-* Then run the nighthawk client: `run-nighthawk-client.sh`
-* You can also run the nighthawk client with some additional options to change the request and response body sizes:
+* Then run the benchmark suite: `run-benchmark.sh`
+* Alternately, you can run the nighthawk client manually for testing by running `run-nighthawk-client.sh`
+    * Example with some additional options to change the request and response body sizes:
 
       ./run-nighthawk-client.sh \
           --request-body-size $((100 * 1024)) \
