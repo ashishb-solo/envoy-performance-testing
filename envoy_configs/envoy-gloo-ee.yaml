@@ -1,4 +1,5 @@
 admin:
+  profile_path: "/dev/shm/envoy.prof"
   address:
     socket_address: { address: 127.0.0.1, port_value: 11001 }
 
@@ -96,6 +97,7 @@ static_resources:
           - name: http
             typed_config:
               "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              generate_request_id: false
               codec_type: AUTO
               stat_prefix: config_test
               route_config:
@@ -135,6 +137,7 @@ static_resources:
                 - name: envoy.filters.http.router
                   typed_config:
                     "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+                    dynamic_stats: false
               access_log:
                 - name: accesslog
                   filter:

@@ -20,10 +20,10 @@ static_resources:
                       domains:
                         - "*"
                 http_filters:
-                  - name: dynamic-delay
-                    typed_config:
-                      "@type": type.googleapis.com/nighthawk.server.DynamicDelayConfiguration
-                      static_delay: 0.5s
+                  # - name: dynamic-delay
+                  #   typed_config:
+                  #     "@type": type.googleapis.com/nighthawk.server.DynamicDelayConfiguration
+                  #     static_delay: 0.5s
                   - name: test-server # before envoy.router because order matters!
                     typed_config:
                       "@type": type.googleapis.com/nighthawk.server.ResponseOptions
